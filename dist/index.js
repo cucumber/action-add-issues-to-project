@@ -984,7 +984,7 @@ const run = async () => {
     data: {
       data: {
         organization: {
-          projectsNext: {
+          projectsV2: {
             nodes: projects,
           },
         },
