@@ -83,7 +83,7 @@ const run = async () => {
       projectId: "${projectId}"
       contentId: "${contentId}"
     })
-    { projectNextItem {id} }
+    { projectV2Item {id} }
   }`;
 
   core.debug(`Adding issue #${issueNumber} (node ID ${contentId}) to project ID ${projectId}: ${addQuery}`);
