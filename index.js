@@ -34,7 +34,7 @@ const run = async () => {
   const ORG = GITHUB_ORG;
   const listProjectsQuery = `{
     organization(login: "${ORG}") {
-      projectsNext(first: 20) {
+      projectsV2(first: 20) {
         nodes {id title}
       }
     }
