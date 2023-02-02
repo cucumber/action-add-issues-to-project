@@ -79,7 +79,7 @@ const run = async () => {
   core.info(`Unwrapped issue context payload OK: Issue #${issueNumber} (node ID ${contentId}) - action ${eventName}`);
 
   const addQuery = `mutation {
-    addProjectNextItem(input: {
+    addProjectV2ItemById(input: {
       projectId: "${projectId}"
       contentId: "${contentId}"
     })
@@ -92,8 +92,8 @@ const run = async () => {
   core.debug(`Result of add query was: ${JSON.stringify(data)}`);
   const {
     data: {
-      addProjectNextItem: {
-        projectNextItem: {
+      addProjectV2ItemById: {
+        item: {
           id,
         },
       },
